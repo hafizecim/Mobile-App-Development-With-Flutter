@@ -4,68 +4,37 @@ const String lesson01Summary = '''
 Bu derste Flutter ile temel arayüz (UI) bileşenleri tanıtılmaktadır. 
 Uygulama tasarımında düzen ve yerleşim nasıl yapılır, renkli konteynerlerle nasıl 
 görsel farklılıklar oluşturulur, Row ve Column yapıları nasıl kullanılır, 
-MediaQuery ile ekran boyutlarına göre uyarlama nasıl yapılır gibi temel konular işlenmiştir.
+widget hiyerarşisi ve arka plan renkleri nasıl ayarlanır gibi temel konular işlenmiştir.
 
 Ana Başlıklar:
-- SafeArea: Cihazın ekran sınırları ve çentik bölgelerine göre içeriğin güvenli yerleşimini sağlar.
-- AppBar: Uygulamanın üst kısmında başlık, menü veya geri butonu gibi navigasyon bileşenlerini barındırır.
-- Container: UI elemanlarını sarmak için kullanılır; renk, boyut, kenar boşluğu gibi stil özellikleri eklenebilir.
-- Row ve Column: Çoklu widget’ları yatay (Row) ve dikey (Column) olarak düzenler.
-- MediaQuery: Ekranın genişliği ve yüksekliği alınarak, elemanlar cihaz ekranına göre ölçeklendirilir.
-- SizedBox: Elemanlar arasında boşluk bırakmak için kullanılır.
+- MaterialApp: Flutter uygulamasının temel yapısı ve temaları için kullanılır.
+- Scaffold: Sayfa düzenini oluşturur, AppBar ve Body gibi bölümleri barındırır.
+- AppBar: Uygulamanın üst kısmında başlık ve arka plan rengi ayarlanır.
+- Container: Renk, boyut, kenar boşluk ve iç boşluk ayarları ile kutu oluşturulur.
+- Row ve Column: Yatay ve dikey widget düzenlemeleri yapılır.
+- FloatingActionButton: Ekranın sağ alt köşesinde aksiyon butonu oluşturulur.
+- Alignment ve Margin/Padding: Widget içi ve dışı boşluk ve hizalama ayarları.
 
 Neden Bu Ders Önemli?
-- Temel arayüz oluşturmanın ilk adımıdır.
-- Flutter’ın en sık kullanılan widget’ları tanıtılır.
-- Responsive tasarımın temeli atılır.
-- Farklı renk ve düzen seçenekleri ile görsel estetik sağlanır.
+- Flutter arayüzlerinin temel yapı taşları öğrenilir.
+- Widget hiyerarşisi kavranır.
+- Tasarımda renk, boyut, hizalama gibi temel kavramlar pekiştirilir.
+- FloatingActionButton gibi etkileşimli widget kullanımı gösterilir.
 
 Renklerle Özet:
 Kavram                | Örnek Renk             | Açıklama
 --------------------  | -----------------------| -------------------------------
-SafeArea              | 🟢 Yeşil               | Güvenli alan koruması
-AppBar                | ⚫ Siyah               | Başlık ve navigasyon çubuğu
-Container             | 🔵 Mavi, 🔴 Kırmızı   | Arka plan renkleri
-Row                   | 🟡 Sarı (düşünsel)    | Yatay widget dizilimi
-MediaQuery            | 🟠 Turuncu            | Ekran boyutlarına uyum
-SizedBox              | ⚪ Beyaz              | Boşluk bırakma
+MaterialApp           | 🟣 Mor                 | Uygulama genel yapısı ve tema
+Scaffold              | ⚪ Beyaz                | Sayfa düzeni, temel iskelet
+AppBar                | 🟤 Mor tonları          | Başlık ve navigasyon çubuğu
+Container             | 🟠 Pembe, 🔴 Turuncu   | Arka plan renkleri, kutular
+Row                   | 🟡 Sarı (düşünsel)     | Yatay widget düzeni
+Column                | 🟢 Yeşil (düşünsel)    | Dikey widget düzeni
+FloatingActionButton  | 🟡 Sarı                | Ekran altı hızlı işlem butonu
 
 Özet:
-Bu derste Flutter uygulamalarında temel arayüz yapısı, AppBar, Row, Column, SafeArea,
-MediaQuery kullanımı ve Container renk düzenleri gibi konular detaylıca anlatılmıştır.
+Bu derste Flutter arayüzlerinde temel widget kullanımı, düzenleme ve renk ayarları 
+detaylıca gösterilmiştir. Row ve Column ile yatay-dikey düzenleme, Container ile 
+renk ve boşluk ayarları, AppBar ve FloatingActionButton gibi standart UI öğeleri 
+örneklerle anlatılmıştır.
 ''';
-
-/// Flutter Ders 01 Özeti
-/// 
-/// Bu derste Flutter ile temel arayüz (UI) bileşenleri tanıtılmaktadır. 
-/// Uygulama tasarımında düzen ve yerleşim nasıl yapılır, renkli konteynerlerle nasıl 
-/// görsel farklılıklar oluşturulur, Row ve Column yapıları nasıl kullanılır, 
-/// MediaQuery ile ekran boyutlarına göre uyarlama nasıl yapılır gibi temel konular işlenmiştir.
-///
-/// Ana Başlıklar:
-/// - SafeArea: Cihazın ekran sınırları ve çentik bölgelerine göre içeriğin güvenli yerleşimini sağlar.
-/// - AppBar: Uygulamanın üst kısmında başlık, menü veya geri butonu gibi navigasyon bileşenlerini barındırır.
-/// - Container: UI elemanlarını sarmak için kullanılır; renk, boyut, kenar boşluğu gibi stil özellikleri eklenebilir.
-/// - Row ve Column: Çoklu widget’ları yatay (Row) ve dikey (Column) olarak düzenler.
-/// - MediaQuery: Ekranın genişliği ve yüksekliği alınarak, elemanlar cihaz ekranına göre ölçeklendirilir.
-/// - SizedBox: Elemanlar arasında boşluk bırakmak için kullanılır.
-///
-/// Neden Bu Ders Önemli?
-/// - Temel arayüz oluşturmanın ilk adımıdır.
-/// - Flutter’ın en sık kullanılan widget’ları tanıtılır.
-/// - Responsive tasarımın temeli atılır.
-/// - Farklı renk ve düzen seçenekleri ile görsel estetik sağlanır.
-///
-/// Renklerle Özet:
-/// | Kavram        | Örnek Renk           | Açıklama                       |
-/// |---------------|----------------------|-------------------------------|
-/// | SafeArea      | 🟢 Yeşil             | Güvenli alan koruması          |
-/// | AppBar        | ⚫ Siyah              | Başlık ve navigasyon çubuğu    |
-/// | Container     | 🔵 Mavi, 🔴 Kırmızı  | Arka plan renkleri             |
-/// | Row           | 🟡 Sarı (düşünsel)   | Yatay widget dizilimi          |
-/// | MediaQuery    | 🟠 Turuncu           | Ekran boyutlarına uyum         |
-/// | SizedBox      | ⚪ Beyaz              | Boşluk bırakma                 |
-///
-/// Özet:
-/// Bu derste Flutter uygulamalarında temel arayüz yapısı, AppBar, Row, Column, SafeArea,
-/// MediaQuery kullanımı ve Container renk düzenleri gibi konular detaylıca anlatılmıştır.
