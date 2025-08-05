@@ -1,6 +1,6 @@
 // lib/lessons/summaries/lesson03_summary.dart
 
-const String lesson03Summary = '''
+const String lesson02Summary = '''
 Bu derste Flutter'da Row, Flexible ve Expanded widget'larının kullanımı anlatılmaktadır. 
 Ekran düzeninin esnek ve uyumlu hale getirilmesi için esnek widget'ların nasıl kullanıldığı 
 ve taşma hatalarının nasıl önlendiği gösterilmiştir.
@@ -21,5 +21,3 @@ Neden Bu Ders Önemli?
 Bu derste Row yapısı içerisinde Flexible ve Expanded kullanılarak esnek ve uyumlu
 arayüz tasarımının nasıl yapılacağı detaylıca anlatılmıştır.
 ''';
-
-
