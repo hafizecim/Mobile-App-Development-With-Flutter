@@ -19,6 +19,7 @@ class Lesson05 extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
    HomePage({super.key});
   var _sayac = 0;

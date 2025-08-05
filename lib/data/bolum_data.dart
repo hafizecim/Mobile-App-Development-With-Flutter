@@ -13,6 +13,8 @@ import '../dersler/bolum01/lesson04.dart';
 import '../summary/bolum01/lesson04_summary.dart';
 import '../dersler/bolum02/lesson05.dart';
 import '../summary/bolum02/lesson05_summary.dart';
+import '../dersler/bolum02/lesson06.dart';
+import '../summary/bolum02/lesson06_summary.dart';
 
 final List<Bolum> bolumListesi = [
   Bolum(
@@ -53,9 +55,16 @@ final List<Bolum> bolumListesi = [
     dersler: [
       Lesson(
         title: '5. Ders',
-        subtitle: 'Flutter’da Kolayca Arayüz Tasarlamak: Container, Row ve Column',
+        subtitle: 'StatelessWidget kullanımıyla sayaç oluşturma ve görsel yenileme farkı',
         summary: lesson05Summary,
         lessonPage: const Lesson05(),
+        // codeText: '''// Buraya dersin kod içeriği metin olarak gelecek''',
+      ),
+      Lesson(
+        title: '6. Ders',
+        subtitle: 'StatefulWidget ile sayaç oluşturma ve setState kullanımı',
+        summary: lesson06Summary,
+        lessonPage: const lesson06(),
         // codeText: '''// Buraya dersin kod içeriği metin olarak gelecek''',
       ),
       // Diğer dersler burada

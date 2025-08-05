@@ -53,8 +53,7 @@ class LessonListPage extends StatelessWidget {
           final bolum = bolumListesi[bolumIndex];
           return Padding(
             padding: const EdgeInsets.only(top: 2.0),
-            child: ExpansionTile(
-              
+            child: ExpansionTile( 
               backgroundColor: Color(0xFFF9C89B),
               collapsedBackgroundColor: Color(0xFFF4D7A4),
               tilePadding: const EdgeInsets.symmetric(
