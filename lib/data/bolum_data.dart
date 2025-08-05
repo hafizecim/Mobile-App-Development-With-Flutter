@@ -11,6 +11,8 @@ import '../dersler/bolum01/lesson03.dart';
 import '../summary/bolum01/lesson03_summary.dart';
 import '../dersler/bolum01/lesson04.dart';
 import '../summary/bolum01/lesson04_summary.dart';
+import '../dersler/bolum02/lesson05.dart';
+import '../summary/bolum02/lesson05_summary.dart';
 
 final List<Bolum> bolumListesi = [
   Bolum(
@@ -42,6 +44,18 @@ final List<Bolum> bolumListesi = [
         subtitle: 'Profil Sayfası Tasarımı ve Sosyal Medya İkonları',
         summary: lesson04Summary,
         lessonPage: const Lesson04(),
+        // codeText: '''// Buraya dersin kod içeriği metin olarak gelecek''',
+      ),
+      // Diğer dersler burada
+    ],
+  ), Bolum(
+    bolumAdi: "Bölüm 2 - Flutter Temelleri",
+    dersler: [
+      Lesson(
+        title: '5. Ders',
+        subtitle: 'Flutter’da Kolayca Arayüz Tasarlamak: Container, Row ve Column',
+        summary: lesson05Summary,
+        lessonPage: const Lesson05(),
         // codeText: '''// Buraya dersin kod içeriği metin olarak gelecek''',
       ),
       // Diğer dersler burada
